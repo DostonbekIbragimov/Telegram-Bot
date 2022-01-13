@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="local" uuid="7d0f029e-dec2-498f-8693-8400202a26be">
+    <data-source source="LOCAL" name="koinot_market" uuid="e207b4f0-3d5d-4e84-bf5d-761024da813e">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/koinot_shop_bot</jdbc-url>
+      <jdbc-url>jdbc:postgresql://localhost:5432/koinot_market</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
