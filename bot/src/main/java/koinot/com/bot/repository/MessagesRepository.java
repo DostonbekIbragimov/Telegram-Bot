@@ -1,6 +1,7 @@
 package koinot.com.bot.repository;
 
 import koinot.com.bot.entity.Messages;
+import koinot.com.bot.entity.enums.Msg;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
@@ -9,5 +10,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @since 26/08/21
  */
 public interface MessagesRepository extends JpaRepository<Messages, Long> {
+
+    Messages findByName(String name);
 
 }

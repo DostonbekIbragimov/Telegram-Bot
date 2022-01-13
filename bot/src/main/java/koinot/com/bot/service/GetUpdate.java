@@ -1,9 +1,11 @@
 package koinot.com.bot.service;
 
 import koinot.com.bot.entity.User;
+import koinot.com.bot.entity.enums.Msg;
+import koinot.com.bot.entity.enums.UserState;
 import koinot.com.bot.exception.ExceptionSend;
-import koinot.com.bot.repository.UserRepository;
-import koinot.com.bot.service.UserService.UserService;
+import koinot.com.bot.service.DBservice.MessageDB;
+import koinot.com.bot.service.DBservice.UserDB;
 import koinot.com.bot.telegramBot.Bot;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,10 +33,11 @@ public class GetUpdate {
 
     @Autowired ExceptionSend exceptionSend;
 
-    @Autowired UserService userService;
+    @Autowired UserDB userdb;
 
     @Autowired RegisterUser registerUser;
 
+    @Autowired MessageDB messageDB;
 
 
     public void answerBot(Update update) throws TelegramApiException {
@@ -64,8 +67,23 @@ public class GetUpdate {
         }
     }
 
-    public void AnswerBotCallbackQuery(Update update) throws TelegramApiException {
+    public void AnswerBotCallbackQuery(Update update) {
+        String data=update.getCallbackQuery().getData();
+        Long chat_id=update.getCallbackQuery().getFrom().getId();
+        String language=BotAnswerString.uzl;
 
+        User user=new User();
+        if (userdb.existsByTelegramId(chat_id)) {
+            user=userdb.findAllByTelegramId(chat_id);
+            if (user.getLanguage() != null) {
+                language=user.getLanguage();
+            }
+        }
+        log.info("user callback query "+update.getCallbackQuery().getData());
+        if (user.getState().equals(UserState.CHOOSE_LANGUAGE) && (data.equals(BotAnswerString.uzl) || data.equals(
+                BotAnswerString.uz) || data.equals(BotAnswerString.ru) || data.equals(BotAnswerString.en))) {
+            registerUser.editLanguage(update);
+        }
     }
 
     public void AnswerBotInlineMode(Update update) throws TelegramApiException {
@@ -73,22 +91,22 @@ public class GetUpdate {
     }
 
     public void AnswerBotMessage(Update update) {
-        Message message = update.getMessage();
-        Long id = update.getMessage().getFrom().getId();
-        String language = BotAnswerString.uzl;
-        User user = new User();
-        if(userService.existsByTelegramId( id )){
-            user = userService.findAllByTelegramId( id );
-            if(user.getLanguage() != null){
-                language = user.getLanguage();
+        Message message=update.getMessage();
+        Long id=update.getMessage().getFrom().getId();
+        String language=BotAnswerString.uzl;
+        User user=new User();
+        if (userdb.existsByTelegramId(id)) {
+            user=userdb.findAllByTelegramId(id);
+            if (user.getLanguage() != null) {
+                language=user.getLanguage();
             }
         }
 
-        if(message.getText().equals( "/start" )){
-            registerUser.userLanguage( update );
-            registerUser.sendVideo( update );
+        if (message.getText().equals("/start")) {
+            registerUser.userLanguage(update);
+            registerUser.sendVideo(update);
         }
-        send(update.getMessage().getChatId(),"hello");
+        send(update.getMessage().getChatId(),messageDB.getMessage(Msg.HELLO).getTextEn());
 
     }
 

@@ -31,8 +31,8 @@ public class WorkingALot {
         for (int i=0; i < stringList.size(); i++) {
             row=new KeyboardRow();
             row.add(stringList.get(i));
-            if (i < stringList.size() - 1) {
-                row.add(stringList.get(i + 1));
+            if (i < stringList.size()-1) {
+                row.add(stringList.get(i+1));
                 i++;
             }
             keyboard.add(row);
@@ -49,8 +49,8 @@ public class WorkingALot {
         for (int i=0; i < stringList.size(); i++) {
             List<InlineKeyboardButton> inlineKeyboardButton=new ArrayList<>();
             inlineKeyboardButton.add(makeMessage(stringList.get(i),stringList.get(i).replace(' ','_')));
-            if (i < stringList.size() - 1) {
-                inlineKeyboardButton.add(makeMessage(stringList.get(i + 1),stringList.get(i + 1)));
+            if (i < stringList.size()-1) {
+                inlineKeyboardButton.add(makeMessage(stringList.get(i+1),stringList.get(i+1)));
                 i++;
             }
             listListRows.add(inlineKeyboardButton);
@@ -66,19 +66,18 @@ public class WorkingALot {
         List<List<InlineKeyboardButton>> listListRows=new ArrayList<>();
         for (int i=0; i < stringList.size(); i++) {
             List<InlineKeyboardButton> inlineKeyboardButton=new ArrayList<>();
-            inlineKeyboardButton.add(makeMessage(stringList.get(i),BotAnswerString.koinot + stringList.get(i)));
-            if (i < stringList.size() - 1) {
-                inlineKeyboardButton.add(makeMessage(stringList.get(i + 1),
-                                                     BotAnswerString.koinot + stringList.get(i + 1)));
+            inlineKeyboardButton.add(makeMessage(stringList.get(i),BotAnswerString.koinot+stringList.get(i)));
+            if (i < stringList.size()-1) {
+                inlineKeyboardButton.add(makeMessage(stringList.get(i+1),BotAnswerString.koinot+stringList.get(i+1)));
                 i++;
             }
             listListRows.add(inlineKeyboardButton);
         }
 
         List<InlineKeyboardButton> inlineKeyboardButton=new ArrayList<>();
-        inlineKeyboardButton.add(makeMessage(BotAnswerString.PREV,BotAnswerString._koinot_prev_ + prev));
-        inlineKeyboardButton.add(makeMessage(BotAnswerString.CANCEL,"cancel" + BotAnswerString.CANCEL));
-        inlineKeyboardButton.add(makeMessage(BotAnswerString.NEXT,BotAnswerString._koinot_next_ + next));
+        inlineKeyboardButton.add(makeMessage(BotAnswerString.PREV,BotAnswerString._koinot_prev_+prev));
+        inlineKeyboardButton.add(makeMessage(BotAnswerString.CANCEL,"cancel"+BotAnswerString.CANCEL));
+        inlineKeyboardButton.add(makeMessage(BotAnswerString.NEXT,BotAnswerString._koinot_next_+next));
         listListRows.add(inlineKeyboardButton);
 
         inlineKeyboardMarkup.setKeyboard(listListRows);
@@ -95,19 +94,19 @@ public class WorkingALot {
         List<List<InlineKeyboardButton>> listListRows=new ArrayList<>();
         for (int i=0; i < stringList.size(); i++) {
             List<InlineKeyboardButton> inlineKeyboardButton=new ArrayList<>();
-            inlineKeyboardButton.add(makeMessage(stringList.get(i),"koinot" + stringList.get(i)));
-            if (i < stringList.size() - 1) {
-                inlineKeyboardButton.add(makeMessage(stringList.get(i + 1),"koinot" + stringList.get(i + 1)));
+            inlineKeyboardButton.add(makeMessage(stringList.get(i),"koinot"+stringList.get(i)));
+            if (i < stringList.size()-1) {
+                inlineKeyboardButton.add(makeMessage(stringList.get(i+1),"koinot"+stringList.get(i+1)));
                 i++;
             }
             listListRows.add(inlineKeyboardButton);
         }
 
         List<InlineKeyboardButton> inlineKeyboardButton=new ArrayList<>();
-        inlineKeyboardButton.add(makeMessage(BotAnswerString.PREV + " " + prev,"_koinot_prev_" + prev));
-        inlineKeyboardButton.add(makeMessage(BotAnswerString.CANCEL,"cancel" + BotAnswerString.CANCEL));
-        inlineKeyboardButton.add(makeMessage(
-                (countNext < 0 ? "0" : countNext) + " " + BotAnswerString.NEXT,"_koinot_next_" + next));
+        inlineKeyboardButton.add(makeMessage(BotAnswerString.PREV+" "+prev,"_koinot_prev_"+prev));
+        inlineKeyboardButton.add(makeMessage(BotAnswerString.CANCEL,"cancel"+BotAnswerString.CANCEL));
+        inlineKeyboardButton.add(
+                makeMessage((countNext < 0 ? "0" : countNext)+" "+BotAnswerString.NEXT,"_koinot_next_"+next));
         listListRows.add(inlineKeyboardButton);
 
         inlineKeyboardMarkup.setKeyboard(listListRows);
@@ -140,8 +139,8 @@ public class WorkingALot {
         for (int i=0; i < stringList.size(); i++) {
             List<InlineKeyboardButton> inlineKeyboardButton=new ArrayList<>();
             inlineKeyboardButton.add(makeMessage(stringList.get(i),stringList.get(i).replace(' ','_')));
-            if (i < stringList.size() - 1) {
-                inlineKeyboardButton.add(makeMessage(stringList.get(i + 1),stringList.get(i + 1)));
+            if (i < stringList.size()-1) {
+                inlineKeyboardButton.add(makeMessage(stringList.get(i+1),stringList.get(i+1)));
                 i++;
             }
             listListRows.add(inlineKeyboardButton);
@@ -160,8 +159,8 @@ public class WorkingALot {
         for (int i=0; i < stringList.size(); i++) {
             List<InlineKeyboardButton> inlineKeyboardButton=new ArrayList<>();
             inlineKeyboardButton.add(makeMessage(stringList.get(i),stringList.get(i).replace(' ','_')));
-            if (i < stringList.size() - 1) {
-                inlineKeyboardButton.add(makeMessage(stringList.get(i + 1),stringList.get(i + 1)));
+            if (i < stringList.size()-1) {
+                inlineKeyboardButton.add(makeMessage(stringList.get(i+1),stringList.get(i+1)));
                 i++;
             }
             listListRows.add(inlineKeyboardButton);

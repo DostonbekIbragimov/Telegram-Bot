@@ -1,4 +1,4 @@
-package koinot.com.bot.service.UserService;
+package koinot.com.bot.service.DBservice;
 
 import koinot.com.bot.entity.User;
 import koinot.com.bot.repository.UserRepository;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 @Slf4j
-public class UserService {
+public class UserDB {
 
     @Autowired UserRepository userRepository;
 

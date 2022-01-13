@@ -1,6 +1,5 @@
 package koinot.com.bot.entity;
 
-import koinot.com.bot.entity.enums.Msg;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,7 +23,7 @@ import java.sql.Timestamp;
 @AllArgsConstructor
 @Entity(name="messages")
 public class Messages {
-    @Id @GeneratedValue(strategy=GenerationType.AUTO) private Long id;
+    @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
 
     @OrderBy @CreationTimestamp @Column(nullable=false, updatable=false) private Timestamp createdAt;
 
@@ -34,43 +33,21 @@ public class Messages {
 
     @LastModifiedBy private Long updatedBy;
 
-    @Column(nullable = false)
-    @Enumerated(EnumType.STRING)
-    private Msg name;
+    @Column(nullable=false, unique=true) private String name;
 
-    @Column(nullable = false)
-    private String descriptionUz;
+    @Column(nullable=false) private String description;
 
-    @Column(columnDefinition="TEXT", nullable = false)
-    private String textUz;
+    @Column(columnDefinition="TEXT", nullable=false) private String textUz;
 
-    @Column(nullable = false)
-    private String descriptionRu;
+    @Column(columnDefinition="TEXT", nullable=false) private String textRu;
 
-    @Column(columnDefinition="TEXT", nullable = false)
-    private String textRu;
+    @Column(columnDefinition="TEXT", nullable=false) private String textEn;
 
-    @Column(nullable = false)
-    private String descriptionKr;
-
-    @Column(columnDefinition="TEXT", nullable = false)
-    private String textKr;
-
-    @Column(nullable = false)
-    private String descriptionEn;
-
-    @Column(columnDefinition="TEXT", nullable = false)
-    private String textEn;
-
-    public Messages(Msg name,String descriptionUz,String textUz,String descriptionRu,String textRu,String descriptionKr,String textKr,String descriptionEn,String textEn) {
+    public Messages(String name,String description,String textUz,String textRu,String textEn) {
         this.name=name;
-        this.descriptionUz=descriptionUz;
+        this.description=description;
         this.textUz=textUz;
-        this.descriptionRu=descriptionRu;
         this.textRu=textRu;
-        this.descriptionKr=descriptionKr;
-        this.textKr=textKr;
-        this.descriptionEn=descriptionEn;
         this.textEn=textEn;
     }
 }
