@@ -15,6 +15,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 public class DataLoader implements CommandLineRunner {
 
@@ -41,14 +44,18 @@ public class DataLoader implements CommandLineRunner {
             roleRepository.save(new Role(2,RoleName.ADMIN));
             roleRepository.save(new Role(3,RoleName.SUPPER_ADMIN));
 
+            List<Messages> messages=new ArrayList<>();
+
             for (Msg value : Msg.values()) {
-                messagesRepository.save(new Messages(value,value.getTitle(),value.getTitle(),value.getTitle(),value.getTitle(),value.getTitle(),value.getTitle(),value.getTitle(),value.getTitle()));
+
+                messages.add(new Messages(value.name(),value.getDescription(),
+                                          value.getTitleUz() == null ? value.getTitleEn() : value.getTitleUz(),
+                                          value.getTitleRu() == null ? value.getTitleEn() : value.getTitleRu(),
+                                          value.getTitleEn()));
+
             }
 
-//            userRepository.save(new User(520405728,"Qudratjon","Komilov",UserState.DEFAULT,UserType.SUPPER_ADMIN,BotAnswerString.uzl,"+998917797278"));
-//
-//            userRepository.save(new User(281805829,"Saidaziz","Umarov",UserState.DEFAULT,UserType.ADMIN,BotAnswerString.uzl,"+998977772109"));
-
+            messagesRepository.saveAll(messages);
 
         }
     }

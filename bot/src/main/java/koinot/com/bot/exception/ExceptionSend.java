@@ -16,6 +16,7 @@ import java.util.Date;
 @Component
 @Slf4j
 public class ExceptionSend {
+
    @Lazy @Autowired GetUpdate getUpdate;
 
 
