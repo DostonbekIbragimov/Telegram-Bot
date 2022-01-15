@@ -32,6 +32,7 @@ public class Job extends ReadyProduct {
      * */
     private Boolean offer=false;
 
+
     /*
      *
      * bandlik turi
