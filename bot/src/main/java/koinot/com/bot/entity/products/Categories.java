@@ -1,5 +1,7 @@
-package koinot.com.bot.entity;
+package koinot.com.bot.entity.products;
 
+import koinot.com.bot.entity.Attachment;
+import koinot.com.bot.enums.TypeCategory;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,6 +12,7 @@ import org.springframework.data.annotation.LastModifiedBy;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.List;
 
 /**
  * @className: BotMessage  $
@@ -21,7 +24,7 @@ import java.sql.Timestamp;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name="categories")
+@Entity(name="Categories")
 public class Categories {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
@@ -52,6 +55,9 @@ public class Categories {
 
     @ManyToOne private Categories categoriesParent;
 
+    @ManyToMany private List<Brands> brands;
+
+    @Column(nullable=false) private TypeCategory type;
 
 
 }

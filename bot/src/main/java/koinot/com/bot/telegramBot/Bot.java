@@ -38,7 +38,6 @@ public class Bot extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
         log.error("bot  AnswerBot=> ",update.getMessage().getText());
-
         getUpdate.answerBot(update);
     }
 
