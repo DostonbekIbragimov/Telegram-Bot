@@ -1,9 +1,9 @@
 package koinot.com.bot.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import koinot.com.bot.entity.enums.Family;
-import koinot.com.bot.entity.enums.Gender;
-import koinot.com.bot.entity.enums.UserState;
+import koinot.com.bot.enums.Family;
+import koinot.com.bot.enums.Gender;
+import koinot.com.bot.enums.UserState;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -30,6 +30,7 @@ import java.util.List;
 @AllArgsConstructor
 @Entity(name="Users")
 public class User implements UserDetails {
+
     @Id @GeneratedValue(strategy=GenerationType.AUTO) private Long id;
 
     @OrderBy @CreationTimestamp @Column(nullable=false, updatable=false) private Timestamp createdAt;

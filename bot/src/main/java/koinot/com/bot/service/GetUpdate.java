@@ -1,8 +1,8 @@
 package koinot.com.bot.service;
 
 import koinot.com.bot.entity.User;
-import koinot.com.bot.entity.enums.Msg;
-import koinot.com.bot.entity.enums.UserState;
+import koinot.com.bot.enums.Msg;
+import koinot.com.bot.enums.UserState;
 import koinot.com.bot.exception.ExceptionSend;
 import koinot.com.bot.service.DBservice.MessageDB;
 import koinot.com.bot.service.DBservice.UserDB;

@@ -1,4 +1,4 @@
-package koinot.com.bot.entity.enums;
+package koinot.com.bot.enums;
 
 /**
  * @className: Msg  $

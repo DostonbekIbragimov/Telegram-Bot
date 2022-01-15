@@ -1,7 +1,6 @@
 package koinot.com.bot.repository;
 
 import koinot.com.bot.entity.Messages;
-import koinot.com.bot.entity.enums.Msg;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

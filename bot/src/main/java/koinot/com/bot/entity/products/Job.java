@@ -1,6 +1,5 @@
 package koinot.com.bot.entity.products;
 
-import koinot.com.bot.entity.Currency;
 import koinot.com.bot.entity.products.template.ReadyProduct;
 import koinot.com.bot.enums.TypeOfAgreement;
 import lombok.AllArgsConstructor;
@@ -8,7 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
+import java.sql.Date;
 
 /**
  * @className: BotMessage  $
@@ -21,24 +20,36 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name="electronics")
-public class Electronics extends ReadyProduct {
+@Entity(name="Job")
+public class Job extends ReadyProduct {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
 
     /*
-    *
-    * maxsulot holati yani ishlatilga yoki yangimi
-    * agar false bo'lsa ishlatilgan
-    * */
-    private Boolean condition=false;
+     *
+     * ishlamoqchimi yoki ish taklif qilyaptimi
+     * agar false ishlamoqchi
+     * */
+    private Boolean offer=false;
+
+    /*
+     *
+     * bandlik turi
+     * agar false vaqtincha ish bo'ladi , true bo'lsa doimiy ishlaydi
+     * */
+    private Boolean typeOfBusy=false;
 
     private String phoneNumber;
 
-    @Enumerated(EnumType.STRING)
-    private TypeOfAgreement typeOfAgreement;
+    @Enumerated(EnumType.STRING) private TypeOfAgreement typeOfAgreement;
 
-    private double price;
+    private double starPrice;
+
+    private double EnPrice;
+
+    private Date starTime;
+
+    private Date endTime;
 
 
 }

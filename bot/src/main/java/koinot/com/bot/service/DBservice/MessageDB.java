@@ -1,9 +1,8 @@
 package koinot.com.bot.service.DBservice;
 
 import koinot.com.bot.entity.Messages;
-import koinot.com.bot.entity.enums.Msg;
+import koinot.com.bot.enums.Msg;
 import koinot.com.bot.repository.MessagesRepository;
-import koinot.com.bot.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

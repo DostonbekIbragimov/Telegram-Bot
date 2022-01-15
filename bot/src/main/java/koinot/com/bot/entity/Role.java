@@ -1,6 +1,6 @@
 package koinot.com.bot.entity;
 
-import koinot.com.bot.entity.enums.RoleName;
+import koinot.com.bot.enums.RoleName;
 import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;

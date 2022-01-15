@@ -2,8 +2,8 @@ package koinot.com.bot.service;
 
 import koinot.com.bot.entity.Messages;
 import koinot.com.bot.entity.User;
-import koinot.com.bot.entity.enums.Msg;
-import koinot.com.bot.entity.enums.UserState;
+import koinot.com.bot.enums.Msg;
+import koinot.com.bot.enums.UserState;
 import koinot.com.bot.exception.ExceptionSend;
 import koinot.com.bot.service.DBservice.MessageDB;
 import koinot.com.bot.service.DBservice.UserDB;
@@ -12,7 +12,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
-import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 import java.util.ArrayList;

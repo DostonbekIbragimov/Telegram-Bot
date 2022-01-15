@@ -2,8 +2,8 @@ package koinot.com.bot.component;
 
 import koinot.com.bot.entity.Messages;
 import koinot.com.bot.entity.Role;
-import koinot.com.bot.entity.enums.Msg;
-import koinot.com.bot.entity.enums.RoleName;
+import koinot.com.bot.enums.Msg;
+import koinot.com.bot.enums.RoleName;
 import koinot.com.bot.repository.MessagesRepository;
 import koinot.com.bot.repository.RoleRepository;
 import koinot.com.bot.repository.UserRepository;
