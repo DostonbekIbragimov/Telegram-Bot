@@ -1,5 +1,7 @@
-package koinot.com.bot.entity;
+package koinot.com.bot.entity.products;
 
+import koinot.com.bot.entity.Attachment;
+import koinot.com.bot.entity.Categories;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,8 +25,8 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name="products")
-public class Products {
+@Entity(name="electronics")
+public class Electronics {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
 

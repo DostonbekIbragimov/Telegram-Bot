@@ -52,4 +52,6 @@ public class Categories {
 
     @ManyToOne private Categories categoriesParent;
 
+
+
 }

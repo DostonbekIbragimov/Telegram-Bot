@@ -59,7 +59,7 @@ public class DataLoader implements CommandLineRunner {
 
         }
     }
-
+    
     public String krill_latin(String text) {
         String str=text
                 .replaceAll("yu","ю")
