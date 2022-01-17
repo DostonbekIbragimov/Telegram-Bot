@@ -32,7 +32,7 @@ public class Transport extends ReadyProduct {
      * */
     private Boolean condition=false;
 
-    private String typeOfBody;
+    @ManyToOne TypeOfBody typeOfBody;
 
     private Date yearOfIssue;
 
@@ -50,11 +50,6 @@ public class Transport extends ReadyProduct {
     private String typeOfFuel;
 
     //here should be 2 more columns or tables
-
-    @Enumerated(EnumType.STRING)
-    private TypeOfAgreement typeOfAgreement;
-
-    private double price;
 
 
 }

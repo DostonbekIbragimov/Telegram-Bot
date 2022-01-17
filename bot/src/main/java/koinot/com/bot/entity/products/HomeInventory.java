@@ -25,9 +25,6 @@ public class HomeInventory extends ReadyProduct {
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
 
     @Enumerated(EnumType.STRING)
-    private TypeOfAgreement typeOfAgreement;
-
-    private double price;
 
     /*
     * if condition is false then it's used (xolati ishlatilgan)

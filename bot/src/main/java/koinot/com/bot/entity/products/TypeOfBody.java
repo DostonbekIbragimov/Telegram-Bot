@@ -1,14 +1,15 @@
 package koinot.com.bot.entity.products;
 
-import koinot.com.bot.entity.Currency;
 import koinot.com.bot.entity.products.template.ReadyProduct;
-import koinot.com.bot.enums.TypeOfAgreement;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
-import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import java.util.Date;
 
 /**
  * @className: BotMessage  $
@@ -21,19 +22,10 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name="electronics")
-public class Electronics extends ReadyProduct {
+@Entity(name="transport")
+public class TypeOfBody extends ReadyProduct {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
-
-    /*
-    *
-    * maxsulot holati yani ishlatilga yoki yangimi
-    * agar false bo'lsa ishlatilgan
-    * */
-    private Boolean condition=false;
-
-    private String phoneNumber;
-
+    private String name;
 
 }

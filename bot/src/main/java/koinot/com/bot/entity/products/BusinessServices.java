@@ -24,9 +24,5 @@ public class BusinessServices extends ReadyProduct {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
 
-    @Enumerated(EnumType.STRING)
-    private TypeOfAgreement typeOfAgreement;
-
-    private double price;
 
 }
