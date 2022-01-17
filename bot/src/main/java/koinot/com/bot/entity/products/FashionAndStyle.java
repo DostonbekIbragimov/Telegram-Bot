@@ -1,6 +1,7 @@
 package koinot.com.bot.entity.products;
 
 import koinot.com.bot.entity.products.template.ReadyProduct;
+import koinot.com.bot.enums.Size;
 import koinot.com.bot.enums.TypeOfAgreement;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,7 +26,7 @@ public class FashionAndStyle extends ReadyProduct {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
 
-    //buni enum qilsa bo'ladi
-    private String size;
+
+    private Size size;
 
 }
