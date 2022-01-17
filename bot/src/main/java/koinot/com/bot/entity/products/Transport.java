@@ -1,7 +1,6 @@
 package koinot.com.bot.entity.products;
 
 import koinot.com.bot.entity.products.template.ReadyProduct;
-import koinot.com.bot.entity.products.template.TypeOfBody;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -32,23 +31,31 @@ public class Transport extends ReadyProduct {
      * */
     private Boolean condition=false;
 
-    @ManyToOne
-    TypeOfBody typeOfBody;
+    @ManyToOne private TypeOfBody typeOfBody;
 
     private Date yearOfIssue;
 
-    private Long mileage;
+    private Double mileage;
     /*
-    * if typeOfTransmission is false, then Type of transmission is Manual Transmission
-    * (Механика), if true is Automatic
+     * if typeOfTransmission is false, then Type of transmission is Manual Transmission
+     * (Механика), if true is Automatic
      */
-    private Boolean typeOfTransmission = false;
+    private Boolean typeOfTransmission=false;
 
     private String colour;
+
+    private String colourCode;
 
     private Double engineCapacity;
 
     private String typeOfFuel;
+
+    @ManyToOne private Models models;
+
+    private Double ownerCount;
+
+
+
 
     //here should be 2 more columns or tables
 
