@@ -1,4 +1,4 @@
-package koinot.com.bot.entity.products;
+package koinot.com.bot.entity.products.template;
 
 import koinot.com.bot.entity.products.template.ReadyProduct;
 import lombok.AllArgsConstructor;

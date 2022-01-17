@@ -1,7 +1,7 @@
 package koinot.com.bot.entity.products;
 
 import koinot.com.bot.entity.products.template.ReadyProduct;
-import koinot.com.bot.enums.TypeOfAgreement;
+import koinot.com.bot.entity.products.template.TypeOfBody;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -32,7 +32,8 @@ public class Transport extends ReadyProduct {
      * */
     private Boolean condition=false;
 
-    @ManyToOne TypeOfBody typeOfBody;
+    @ManyToOne
+    TypeOfBody typeOfBody;
 
     private Date yearOfIssue;
 
