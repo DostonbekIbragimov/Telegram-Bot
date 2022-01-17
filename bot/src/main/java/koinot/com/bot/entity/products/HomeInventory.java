@@ -24,8 +24,6 @@ public class HomeInventory extends ReadyProduct {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
 
-    @Enumerated(EnumType.STRING)
-
     /*
     * if condition is false then it's used (xolati ishlatilgan)
     * if true -> new (xolati yangi)
