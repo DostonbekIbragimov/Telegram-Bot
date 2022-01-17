@@ -24,6 +24,8 @@ import java.util.Date;
 public class FashionAndStyle extends ReadyProduct {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
-   // private size = enum (string / num)
+
+    //buni enum qilsa bo'ladi
+    private String size;
 
 }
