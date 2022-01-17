@@ -4,6 +4,7 @@ import koinot.com.bot.entity.Attachment;
 import koinot.com.bot.entity.Currency;
 import koinot.com.bot.entity.products.Brands;
 import koinot.com.bot.entity.products.Categories;
+import koinot.com.bot.enums.TypeOfAgreement;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -74,5 +75,10 @@ public abstract class ReadyProduct {
 
     @ManyToOne
     private Currency currency;
+
+    @Enumerated(EnumType.STRING)
+    private TypeOfAgreement typeOfAgreement;
+
+    private double price;
 
 }
