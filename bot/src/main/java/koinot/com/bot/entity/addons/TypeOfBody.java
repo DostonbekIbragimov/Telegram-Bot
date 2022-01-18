@@ -1,5 +1,6 @@
-package koinot.com.bot.entity;
+package koinot.com.bot.entity.addons;
 
+import koinot.com.bot.entity.addons.Attachment;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,11 +19,12 @@ import java.sql.Timestamp;
  * @time: 6:35 AM $
  * @author: Qudratjon Komilov
  */
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name="attachment")
-public class Attachment {
+@Entity(name="typeOfBody")
+public class TypeOfBody {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
 
@@ -34,9 +36,22 @@ public class Attachment {
 
     @LastModifiedBy private Long updatedBy;
 
-    @Column(columnDefinition="TEXT", nullable=false) private String name;
+    @Column(columnDefinition="TEXT", nullable=false) private String descriptionUz;
 
-    @Column(nullable=false) private String urlTelegram;
+    @Column(columnDefinition="TEXT", nullable=false) private String descriptionRu;
+
+    @Column(columnDefinition="TEXT", nullable=false) private String descriptionEn;
+
+    @Column(nullable=false) private String nameUz;
+
+    @Column(nullable=false) private String nameRu;
+
+    @Column(nullable=false) private String nameEn;
+
+    @Column(nullable=false) private String iconCategory;
+
+    @ManyToOne private Attachment image;
+
 
 
 }

@@ -1,6 +1,6 @@
-package koinot.com.bot.entity.products;
+package koinot.com.bot.entity.addons;
 
-import koinot.com.bot.entity.Attachment;
+import koinot.com.bot.enums.TypeCategory;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,18 +14,17 @@ import java.sql.Timestamp;
 import java.util.List;
 
 /**
- * @className: Brands  $
+ * @className: BotMessage  $
  * @description: TODO
- * @date: 15 January 2022 $
- * @time: 12:42 PM $
+ * @date: 09 January 2022 $
+ * @time: 6:35 AM $
  * @author: Qudratjon Komilov
  */
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name="Brands")
-public class Brands {
+@Entity(name="Categories")
+public class Categories {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
 
@@ -37,15 +36,27 @@ public class Brands {
 
     @LastModifiedBy private Long updatedBy;
 
-    @Column(columnDefinition="TEXT", nullable=false) private String descriptionUz;//default use
+    @Column(columnDefinition="TEXT", nullable=false) private String descriptionUz;
 
     @Column(columnDefinition="TEXT", nullable=false) private String descriptionRu;
 
     @Column(columnDefinition="TEXT", nullable=false) private String descriptionEn;
 
-    @Column(nullable=false) private String name;
+    @Column(nullable=false) private String nameUz;
+
+    @Column(nullable=false) private String nameRu;
+
+    @Column(nullable=false) private String nameEn;
 
     @Column(nullable=false) private String iconCategory;
 
-    @OneToOne private Attachment image;
+    @ManyToOne private Attachment image;
+
+    @ManyToOne private Categories categoriesParent;
+
+    @ManyToMany private List<Brands> brands;
+
+    @Column(nullable=false) private TypeCategory type;
+
+
 }

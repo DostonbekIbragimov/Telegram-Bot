@@ -1,7 +1,6 @@
-package koinot.com.bot.entity.products;
+package koinot.com.bot.entity.addons;
 
-import koinot.com.bot.entity.Attachment;
-import koinot.com.bot.entity.products.template.ReadyProduct;
+import koinot.com.bot.entity.addons.Attachment;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,21 +11,20 @@ import org.springframework.data.annotation.LastModifiedBy;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
-import java.util.Date;
 
 /**
- * @className: BotMessage  $
+ * @className: Brands  $
  * @description: TODO
- * @date: 09 January 2022 $
- * @time: 6:35 AM $
+ * @date: 15 January 2022 $
+ * @time: 12:42 PM $
  * @author: Qudratjon Komilov
  */
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name="typeOfBody")
-public class TypeOfBody {
+@Entity(name="Brands")
+public class Brands {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
 
@@ -38,22 +36,15 @@ public class TypeOfBody {
 
     @LastModifiedBy private Long updatedBy;
 
-    @Column(columnDefinition="TEXT", nullable=false) private String descriptionUz;
+    @Column(columnDefinition="TEXT", nullable=false) private String descriptionUz;//default use
 
     @Column(columnDefinition="TEXT", nullable=false) private String descriptionRu;
 
     @Column(columnDefinition="TEXT", nullable=false) private String descriptionEn;
 
-    @Column(nullable=false) private String nameUz;
-
-    @Column(nullable=false) private String nameRu;
-
-    @Column(nullable=false) private String nameEn;
+    @Column(nullable=false) private String name;
 
     @Column(nullable=false) private String iconCategory;
 
-    @ManyToOne private Attachment image;
-
-
-
+    @OneToOne private Attachment image;
 }

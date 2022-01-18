@@ -1,6 +1,7 @@
 
 package koinot.com.bot.entity.products;
 
+import koinot.com.bot.entity.addons.Brands;
 import koinot.com.bot.entity.products.template.ReadyProduct;
 import lombok.AllArgsConstructor;
 import lombok.Data;

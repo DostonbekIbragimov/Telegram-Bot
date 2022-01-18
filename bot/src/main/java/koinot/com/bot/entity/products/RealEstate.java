@@ -1,8 +1,8 @@
 
 package koinot.com.bot.entity.products;
 
+import koinot.com.bot.entity.addons.AddOptions;
 import koinot.com.bot.entity.products.template.ReadyProduct;
-import koinot.com.bot.enums.Futures;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

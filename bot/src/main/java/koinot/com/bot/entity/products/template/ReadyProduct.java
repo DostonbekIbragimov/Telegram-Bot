@@ -1,9 +1,9 @@
 package koinot.com.bot.entity.products.template;
 
-import koinot.com.bot.entity.Attachment;
-import koinot.com.bot.entity.Currency;
-import koinot.com.bot.entity.products.Brands;
-import koinot.com.bot.entity.products.Categories;
+import koinot.com.bot.entity.addons.Attachment;
+import koinot.com.bot.entity.addons.Currency;
+import koinot.com.bot.entity.addons.Brands;
+import koinot.com.bot.entity.addons.Categories;
 import koinot.com.bot.enums.TypeOfAgreement;
 import lombok.AllArgsConstructor;
 import lombok.Data;
