@@ -25,4 +25,20 @@ public enum Futures {
      * */
     REAL_ESTATE_HAS_CONDITIONS_NEARBY,
 
-}
+    /*
+    *
+    * UYNI REMONT AXVOLI
+    *
+    * */
+
+    REALESTATE_HAS_HOME_REPAIRS,
+
+    /*
+    *
+    * TRANSPORTDA QOSHIMCHA QULAYLIKLAR BORLIGI
+    *
+    * */
+    TRANSPORT_HAS_ADDITIONAL_OPTIONS;
+
+    }
+
