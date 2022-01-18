@@ -74,6 +74,4 @@ public class RealEstate extends ReadyProduct {
 
     private Boolean raeltor = false;
 
-    @Enumerated(EnumType.STRING)
-    private Futures futures;
 }
