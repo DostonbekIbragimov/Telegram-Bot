@@ -24,6 +24,8 @@ public class HomeInventory extends ReadyProduct {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
 
+    private String subcategories;
+
     /*
     * if condition is false then it's used (xolati ishlatilgan)
     * if true -> new (xolati yangi)

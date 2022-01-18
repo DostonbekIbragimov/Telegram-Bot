@@ -25,4 +25,63 @@ public enum Futures {
      * */
     REAL_ESTATE_HAS_CONDITIONS_NEARBY,
 
-}
+    /*
+    *
+    * UYNI REMONT AXVOLI
+    *
+    * */
+
+    REALESTATE_HAS_HOME_REPAIRS,
+
+    /*
+    *
+    * TRANSPORTDA QOSHIMCHA QULAYLIKLAR BORLIGI
+    *
+    * */
+    TRANSPORT_HAS_ADDITIONAL_OPTIONS,
+
+    /*
+    *
+    * ER KOMMUNAL QULAYLIKLARI
+    *
+    * */
+
+    REAL_ESTATE_GROUND_HAS_PUBLIC_UTILITIES,
+
+    /*
+    *
+    * ER JOYLASHGAN JOYI
+    *
+    *  */
+
+    REAL_ESTATE_GROUND_WHERE_LOCATED,
+
+    /*
+    *
+    * TIJORAT BINO TURI
+    *
+    * */
+
+    REAL_ESTATE_COMMERCIAL_TYPE,
+
+    /*
+    *
+    * TIJORAT BINO QULAYLIKLAR
+    *
+    * */
+
+    REAL_ESTATE_COMMERCIAL_TYPE_CONDITIONS,
+
+    /*
+    *
+    * TIJORAT BINO
+    * KOMMUNAL QULAYLIKLAR
+    *
+    * */
+
+    REAL_ESTATE_COMMERCIAL_TYPE_HAS_PUBLIC_UTILITIES,
+
+
+
+    }
+

@@ -1,35 +1,34 @@
+
 package koinot.com.bot.entity.products;
 
-import koinot.com.bot.entity.Attachment;
-import koinot.com.bot.enums.TypeCategory;
+import koinot.com.bot.entity.products.template.ReadyProduct;
+import koinot.com.bot.enums.Futures;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.data.annotation.CreatedBy;
-import org.springframework.data.annotation.LastModifiedBy;
 
 import javax.persistence.*;
 import java.sql.Date;
-import java.sql.Timestamp;
-import java.util.List;
-import java.util.*;
 
 /**
  * @className: BotMessage  $
  * @description: TODO
  * @date: 09 January 2022 $
  * @time: 6:35 AM $
- * @author: Qudratjon Komilov
+ * @author: Qudratjon Komilov 
  */
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name="rent")
-public class Rent {
+@Entity(name="realEstate")
+public class RealEstate extends ReadyProduct {
+
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
+
+    private Boolean typeOfHouse;
+
 
     private Double livinigArea;
 
@@ -47,19 +46,33 @@ public class Rent {
 
     private String apartmentLayout;
 
-//  private Date yearOfConstruction;
+    private String appointment;
 
-//  private Date starTime;
+    private Double carPlaces;
 
-//  private Date endTime;
+    private String garageType;
+
+    private Double square;
+
+    /*
+    *
+    * Parkova bor/yoq
+    * if true bor, if false yoq
+    *
+    * */
+    private Boolean parking = false;
+
+    private Date starTime;
+
+    private Date endTime;
 
     private String bathroom;
 
     /*
-    *
-    * mebel qoyilgan yoki qoyilmagan statement
-    * if true mebebl bor, if flase yoq
-    *
+     *
+     * mebel qoyilgan yoki qoyilmagan statement
+     * if true mebebl bor, if flase yoq
+     *
      */
 
     private Boolean furniture = false;
@@ -70,8 +83,13 @@ public class Rent {
 
     @ManyToOne private AddOptions addOptions;
 
-    @ManyToOne private Rent RealEstate;
+     /*
+   *
+   * rieltor xizmati
+   * if true bor, if false rieltor xizmati yoq
+   *
+   * */
 
-    @ManyToOne private ConditionosNearby conditionosNearby;
+    private Boolean raeltor = false;
 
 }

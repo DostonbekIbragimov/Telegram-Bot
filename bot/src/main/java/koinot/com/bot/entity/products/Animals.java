@@ -1,4 +1,3 @@
-
 package koinot.com.bot.entity.products;
 
 import koinot.com.bot.entity.products.template.ReadyProduct;
@@ -6,7 +5,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  * @className: BotMessage  $
@@ -19,18 +21,9 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name="realEstate")
-public class RelEstate extends ReadyProduct {
+@Entity(name="animals")
+public class Animals extends ReadyProduct {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
-
-
-
-    /*
-    * if condition is false then it's used (xolati ishlatilgan)
-    * if true -> new (xolati yangi)
-     */
-    private Boolean condition = false;
-
 
 }
