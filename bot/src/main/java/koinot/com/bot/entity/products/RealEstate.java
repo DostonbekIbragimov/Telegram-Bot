@@ -27,6 +27,9 @@ public class RealEstate extends ReadyProduct {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
 
+    private Boolean typeOfHouse;
+
+
     private Double livinigArea;
 
     private Double numberOfRooms;
@@ -43,6 +46,21 @@ public class RealEstate extends ReadyProduct {
 
     private String apartmentLayout;
 
+    private String appointment;
+
+    private Double carPlaces;
+
+    private String garageType;
+
+    private Double square;
+
+    /*
+    *
+    * Parkova bor/yoq
+    * if true bor, if false yoq
+    *
+    * */
+    private Boolean parking = false;
 
     private Date starTime;
 
