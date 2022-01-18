@@ -54,7 +54,7 @@ public class Transport extends ReadyProduct {
 
     private Double ownerCount;
 
-
+    @ManyToOne private AddOptions addOptions;
 
 
     //here should be 2 more columns or tables

@@ -1,13 +1,11 @@
 package koinot.com.bot.entity.products;
 
-import koinot.com.bot.entity.products.template.ReadyProduct;
-import koinot.com.bot.enums.TypeOfAgreement;
+import koinot.com.bot.entity.Attachment;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Date;
 
 /**
  * @className: BotMessage  $
@@ -20,11 +18,14 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name="fashionAndStyle")
-public class FashionAndStyle extends ReadyProduct {
+@Entity(name="sizeOfClothes")
+public class SizeOfClothes {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
 
-    @ManyToOne private SizeOfClothes sizeOfClothes;
+    @Column(nullable=false) private String name;
 
+    @Column(nullable=false) private String iconCategory;
+
+    @ManyToOne private Attachment image;
 }
