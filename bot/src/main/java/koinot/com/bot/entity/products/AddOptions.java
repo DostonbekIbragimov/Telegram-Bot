@@ -1,6 +1,7 @@
 package koinot.com.bot.entity.products;
 
 import koinot.com.bot.entity.Attachment;
+import koinot.com.bot.enums.Futures;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -28,9 +29,31 @@ public class AddOptions {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
 
-    @Column(nullable=false) private String name;
 
-    @Column(nullable=false) private String iconCategory;
+    @UpdateTimestamp @Column(nullable=false) private Timestamp updatedAt;
+
+    @CreatedBy @Column(updatable=false) private Long createdBy;
+
+    @LastModifiedBy private Long updatedBy;
+
+    @Column(columnDefinition="TEXT", nullable=false) private String descriptionUz;//default use
+
+    @Column(columnDefinition="TEXT", nullable=false) private String descriptionRu;
+
+    @Column(columnDefinition="TEXT", nullable=false) private String descriptionEn;
+
+    @Column(nullable=false) private String nameUz;//default use
+
+    @Column(nullable=false) private String nameRu;
+
+    @Column(nullable=false) private String nameEn;
+
+    @Column(nullable=false) private String icon;
 
     @ManyToOne private Attachment image;
+
+    @Enumerated(EnumType.STRING)
+    private Futures futures;
+
+
 }
