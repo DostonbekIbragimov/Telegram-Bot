@@ -1,6 +1,7 @@
 package koinot.com.bot.repository;
 
-import koinot.com.bot.entity.Messages;
+
+import koinot.com.bot.entity.products.ChildsInventory;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -11,8 +12,6 @@ import org.springframework.stereotype.Repository;
  */
 
 @Repository
-public interface MessagesRepository extends JpaRepository<Messages, Long> {
-
-    Messages findByName(String name);
+public interface ChildsInventoryRepository extends JpaRepository<ChildsInventory, Long> {
 
 }
