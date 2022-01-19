@@ -1,6 +1,6 @@
-package koinot.com.bot.entity.products;
+package koinot.com.bot.entity.addons;
 
-import koinot.com.bot.entity.Attachment;
+import koinot.com.bot.entity.addons.Attachment;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

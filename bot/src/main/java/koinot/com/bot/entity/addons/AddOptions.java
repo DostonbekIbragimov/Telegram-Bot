@@ -1,10 +1,10 @@
-package koinot.com.bot.entity.products;
+package koinot.com.bot.entity.addons;
 
-import koinot.com.bot.entity.Attachment;
+import koinot.com.bot.entity.addons.Attachment;
+import koinot.com.bot.enums.Futures;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.LastModifiedBy;
@@ -13,22 +13,21 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 
 /**
- * @className: Brands  $
+ * @className: BotMessage  $
  * @description: TODO
- * @date: 15 January 2022 $
- * @time: 12:42 PM $
+ * @date: 09 January 2022 $
+ * @time: 6:35 AM $
  * @author: Qudratjon Komilov
  */
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name="Models")
-public class Models {
+@Entity(name="addOptions")
+public class AddOptions {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
 
-    @OrderBy @CreationTimestamp @Column(nullable=false, updatable=false) private Timestamp createdAt;
 
     @UpdateTimestamp @Column(nullable=false) private Timestamp updatedAt;
 
@@ -42,12 +41,18 @@ public class Models {
 
     @Column(columnDefinition="TEXT", nullable=false) private String descriptionEn;
 
-    @Column(nullable=false) private String name;
+    @Column(nullable=false) private String nameUz;//default use
 
-    @Column(nullable=false) private String iconCategory;
+    @Column(nullable=false) private String nameRu;
 
-    @OneToOne private Attachment image;
+    @Column(nullable=false) private String nameEn;
 
-    @ManyToOne
-    private Brands brands;
+    @Column(nullable=false) private String icon;
+
+    @ManyToOne private Attachment image;
+
+    @Enumerated(EnumType.STRING)
+    private Futures futures;
+
+
 }

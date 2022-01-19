@@ -1,7 +1,5 @@
-package koinot.com.bot.entity.products;
+package koinot.com.bot.entity.addons;
 
-import koinot.com.bot.entity.Attachment;
-import koinot.com.bot.enums.TypeCategory;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,7 +10,6 @@ import org.springframework.data.annotation.LastModifiedBy;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
-import java.util.List;
 
 /**
  * @className: BotMessage  $
@@ -24,8 +21,8 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name="Categories")
-public class Categories {
+@Entity(name="attachment")
+public class Attachment {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
 
@@ -37,27 +34,9 @@ public class Categories {
 
     @LastModifiedBy private Long updatedBy;
 
-    @Column(columnDefinition="TEXT", nullable=false) private String descriptionUz;
+    @Column(columnDefinition="TEXT", nullable=false) private String name;
 
-    @Column(columnDefinition="TEXT", nullable=false) private String descriptionRu;
-
-    @Column(columnDefinition="TEXT", nullable=false) private String descriptionEn;
-
-    @Column(nullable=false) private String nameUz;
-
-    @Column(nullable=false) private String nameRu;
-
-    @Column(nullable=false) private String nameEn;
-
-    @Column(nullable=false) private String iconCategory;
-
-    @ManyToOne private Attachment image;
-
-    @ManyToOne private Categories categoriesParent;
-
-    @ManyToMany private List<Brands> brands;
-
-    @Column(nullable=false) private TypeCategory type;
+    @Column(nullable=false) private String urlTelegram;
 
 
 }

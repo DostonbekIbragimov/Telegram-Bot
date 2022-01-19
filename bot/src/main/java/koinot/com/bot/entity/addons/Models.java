@@ -1,7 +1,5 @@
-package koinot.com.bot.entity.products;
+package koinot.com.bot.entity.addons;
 
-import koinot.com.bot.entity.Attachment;
-import koinot.com.bot.enums.Futures;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,21 +12,22 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 
 /**
- * @className: BotMessage  $
+ * @className: Brands  $
  * @description: TODO
- * @date: 09 January 2022 $
- * @time: 6:35 AM $
+ * @date: 15 January 2022 $
+ * @time: 12:42 PM $
  * @author: Qudratjon Komilov
  */
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name="addOptions")
-public class AddOptions {
+@Entity(name="Models")
+public class Models {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
 
+    @OrderBy @CreationTimestamp @Column(nullable=false, updatable=false) private Timestamp createdAt;
 
     @UpdateTimestamp @Column(nullable=false) private Timestamp updatedAt;
 
@@ -42,18 +41,12 @@ public class AddOptions {
 
     @Column(columnDefinition="TEXT", nullable=false) private String descriptionEn;
 
-    @Column(nullable=false) private String nameUz;//default use
+    @Column(nullable=false) private String name;
 
-    @Column(nullable=false) private String nameRu;
+    @Column(nullable=false) private String iconCategory;
 
-    @Column(nullable=false) private String nameEn;
+    @OneToOne private Attachment image;
 
-    @Column(nullable=false) private String icon;
-
-    @ManyToOne private Attachment image;
-
-    @Enumerated(EnumType.STRING)
-    private Futures futures;
-
-
+    @ManyToOne
+    private Brands brands;
 }

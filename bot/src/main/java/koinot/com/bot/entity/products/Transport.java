@@ -1,5 +1,8 @@
 package koinot.com.bot.entity.products;
 
+import koinot.com.bot.entity.addons.AddOptions;
+import koinot.com.bot.entity.addons.Models;
+import koinot.com.bot.entity.addons.TypeOfBody;
 import koinot.com.bot.entity.products.template.ReadyProduct;
 import lombok.AllArgsConstructor;
 import lombok.Data;

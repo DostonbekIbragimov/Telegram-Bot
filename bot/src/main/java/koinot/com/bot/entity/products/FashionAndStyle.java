@@ -1,13 +1,12 @@
 package koinot.com.bot.entity.products;
 
+import koinot.com.bot.entity.addons.SizeOfClothes;
 import koinot.com.bot.entity.products.template.ReadyProduct;
-import koinot.com.bot.enums.TypeOfAgreement;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.Date;
 
 /**
  * @className: BotMessage  $

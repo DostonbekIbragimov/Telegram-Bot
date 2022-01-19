@@ -1,4 +1,4 @@
-package koinot.com.bot.entity;
+package koinot.com.bot.entity.addons;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
