@@ -9,26 +9,30 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.List;
 
 /**
  * @className: BotMessage  $
  * @description: TODO
  * @date: 09 January 2022 $
  * @time: 6:35 AM $
- * @author: Qudratjon Komilov 
+ * @author: Qudratjon Komilov
  */
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name="realEstate")
+@Entity(name = "realEstate")
 public class RealEstate extends ReadyProduct {
 
 
-    @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private Boolean typeOfHouse;
 
+    private Date yearOfIssue;
 
     private Double livinigArea;
 
@@ -42,9 +46,12 @@ public class RealEstate extends ReadyProduct {
 
     private Double totalFloors;
 
-    private String typeOfBuilding;
 
-    private String apartmentLayout;
+    @ManyToOne
+    private AddOptions typeOfBuilding;
+
+    @ManyToOne
+    private AddOptions apartmentLayout;
 
     private String appointment;
 
@@ -55,18 +62,18 @@ public class RealEstate extends ReadyProduct {
     private Double square;
 
     /*
-    *
-    * Parkova bor/yoq
-    * if true bor, if false yoq
-    *
-    * */
+     *
+     * Parkova bor/yoq
+     * if true bor, if false yoq
+     *
+     * */
     private Boolean parking = false;
 
     private Date starTime;
 
     private Date endTime;
 
-    private String bathroom;
+    private String bathroom;// problem
 
     /*
      *
@@ -81,15 +88,25 @@ public class RealEstate extends ReadyProduct {
 
 // Home repairs qoldi va rieltor xizmati qoshilganmi yoqmi
 
-    @ManyToOne private AddOptions addOptions;
+    @ManyToMany
+    private List<AddOptions> hasFlat;
 
-     /*
-   *
-   * rieltor xizmati
-   * if true bor, if false rieltor xizmati yoq
-   *
-   * */
+    @ManyToMany
+    private List<AddOptions> hasConditionsNearby;
 
-    private Boolean raeltor = false;
+    @ManyToOne
+    private AddOptions hasRepairs;
+
+    @ManyToOne
+    private AddOptions whereLocated;
+
+    /*
+     *
+     * rieltor xizmati
+     * if true bor, if false rieltor xizmati yoq
+     *
+     * */
+
+    private Boolean realtor = false;
 
 }

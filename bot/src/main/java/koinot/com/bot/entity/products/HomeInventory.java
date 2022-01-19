@@ -26,10 +26,5 @@ public class HomeInventory extends ReadyProduct {
 
     private String subcategories;
 
-    /*
-    * if condition is false then it's used (xolati ishlatilgan)
-    * if true -> new (xolati yangi)
-     */
-    private Boolean condition = false;
 
 }

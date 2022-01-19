@@ -23,12 +23,6 @@ public class Electronics extends ReadyProduct {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
 
-    /*
-    *
-    * maxsulot holati yani ishlatilga yoki yangimi
-    * agar false bo'lsa ishlatilgan
-    * */
-    private Boolean condition=false;
 
     private String phoneNumber;
 

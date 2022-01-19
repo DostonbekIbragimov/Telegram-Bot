@@ -31,7 +31,20 @@ public enum Futures {
     *
     * */
 
-    REALESTATE_HAS_HOME_REPAIRS,
+    REAL_ESTATE_HAS_HOME_REPAIRS,
+    /*
+    *
+    * UYNI QURILISH TURI
+    *
+    * */
+
+    REAL_ESTATE_TYPE_OF_BUILDING,    /*
+    *
+    * UYNI REJASI
+    *
+    * */
+
+    REAL_ESTATE_APARTMENT_LAYOUT,
 
     /*
     *

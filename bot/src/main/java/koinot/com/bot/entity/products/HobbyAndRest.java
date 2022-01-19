@@ -25,10 +25,6 @@ public class HobbyAndRest extends ReadyProduct {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
 
-    /*
-    * if condition is false then it's used (xolati ishlatilgan)
-    * if true -> new (xolati yangi)
-     */
-    private Boolean condition = false;
+
     @ManyToOne private Brands brands;
 }

@@ -27,13 +27,6 @@ public class Transport extends ReadyProduct {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
 
-    /*
-     *
-     * maxsulot holati yani ishlatilga yoki yangimi
-     * agar false bo'lsa ishlatilgan
-     * */
-    private Boolean condition=false;
-
     @ManyToOne private TypeOfBody typeOfBody;
 
     private Date yearOfIssue;

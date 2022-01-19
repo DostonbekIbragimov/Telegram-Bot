@@ -81,4 +81,10 @@ public abstract class ReadyProduct {
 
     private double price;
 
+    /*
+     * if condition is false then it's used (xolati ishlatilgan)
+     * if true -> new (xolati yangi)
+     */
+    private Boolean condition = false;
+
 }
