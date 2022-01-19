@@ -1,4 +1,4 @@
-package koinot.com.bot.entity;
+package koinot.com.bot.entity.addons;
 
 import koinot.com.bot.enums.RoleName;
 import org.springframework.security.core.GrantedAuthority;
