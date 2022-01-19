@@ -1,6 +1,7 @@
 package koinot.com.bot.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import koinot.com.bot.entity.addons.Role;
 import koinot.com.bot.enums.Family;
 import koinot.com.bot.enums.Gender;
 import koinot.com.bot.enums.UserState;
