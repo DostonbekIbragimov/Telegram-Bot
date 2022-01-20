@@ -38,20 +38,21 @@ public enum Futures {
     *
     * */
 
-    REAL_ESTATE_TYPE_OF_BUILDING,    /*
+    REAL_ESTATE_TYPE_OF_BUILDING,
+    /*
     *
     * UYNI REJASI
     *
     * */
 
     REAL_ESTATE_APARTMENT_LAYOUT,
-
     /*
     *
-    * TRANSPORTDA QOSHIMCHA QULAYLIKLAR BORLIGI
+    * UCHASTKANI XOLATI
     *
     * */
-    TRANSPORT_HAS_ADDITIONAL_OPTIONS,
+
+    REAL_ESTATE_HOUSE_CONDITIONS,
 
     /*
     *
@@ -93,6 +94,65 @@ public enum Futures {
     * */
 
     REAL_ESTATE_COMMERCIAL_TYPE_HAS_PUBLIC_UTILITIES,
+
+    /*
+     *
+     *
+     *  UCHASTKADA BOR BO'LGAN XUSUSIYATLAR
+     *
+     * */
+    REAL_ESTATE_HAS_HOUSE,
+    /*
+     *
+     *
+     *  UCHASTKADA SANUZEL TURI
+     *
+     * */
+    REAL_ESTATE_BATHROOM_IN_HOUSE,
+    /*
+     *
+     *
+     * UCHASTKADA YAQIN ATROFDA BOR BO'LGAN QULAYLIKLAR
+     *
+     * */
+    REAL_ESTATE_HAS_HOUSE_CONDITIONS_NEARBY,
+    /*
+     *
+     *
+     * UCHASTKANI KOMMUNAL XUSUSIYATLARI
+     *
+     * */
+    REAL_ESTATE_HAS_HOUSE_PUBLIC_UTILITIES,
+
+    /*
+     *
+     *
+     * TIJORAT BINO TURI
+     *
+     * */
+    REAL_ESTATE_TYPE_OF_PROPERTY,
+    /*
+     *
+     *
+     * TIJORAT BINO TURI
+     *
+     * */
+    REAL_ESTATE_PROPERTY_HAS_WORKING_CONDITIONS,
+
+    /*
+     *
+     *
+     * UCHASTKA QURILGAN TURI
+     *
+     * */
+    REAL_ESTATE_TYPE_OF_HOUSE,
+
+    /*
+     *
+     * TRANSPORTDA QOSHIMCHA QULAYLIKLAR BORLIGI
+     *
+     * */
+    TRANSPORT_HAS_ADDITIONAL_OPTIONS
 
 
 

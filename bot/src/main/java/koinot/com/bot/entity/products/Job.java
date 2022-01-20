@@ -53,4 +53,6 @@ public class Job extends ReadyProduct {
     private Date endTime;
 
 
+// attachement for cv should be added
+
 }
