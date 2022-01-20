@@ -56,7 +56,7 @@ public class RealEstate extends ReadyProduct {
     @ManyToOne
     private AddOptions houseCondition;
 
-    private String typeOfHouse;
+//    private String typeOfHouse;
 
 
 
