@@ -1,5 +1,6 @@
 package koinot.com.bot.entity.products;
 
+import koinot.com.bot.entity.addons.Attachment;
 import koinot.com.bot.entity.products.template.ReadyProduct;
 import koinot.com.bot.enums.TypeOfAgreement;
 import lombok.AllArgsConstructor;
@@ -48,11 +49,16 @@ public class Job extends ReadyProduct {
 
     private double EnPrice;
 
-    private Date starTime;
+    private Date startWorkTime;
 
-    private Date endTime;
+    private Date endWorkTime;
+
+    @OneToOne
+    private Attachment resume;
 
 
 // attachement for cv should be added
+
+
 
 }

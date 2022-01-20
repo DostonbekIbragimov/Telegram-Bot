@@ -34,7 +34,7 @@ public enum Futures {
     REAL_ESTATE_HAS_HOME_REPAIRS,
     /*
     *
-    * UYNI QURILISH TURI
+    * KVARTIRA QURILISH TURI
     *
     * */
 
@@ -69,14 +69,6 @@ public enum Futures {
     *  */
 
     REAL_ESTATE_GROUND_WHERE_LOCATED,
-
-    /*
-    *
-    * TIJORAT BINO TURI
-    *
-    * */
-
-    REAL_ESTATE_COMMERCIAL_TYPE,
 
     /*
     *
@@ -134,7 +126,7 @@ public enum Futures {
     /*
      *
      *
-     * TIJORAT BINO TURI
+     * TIJORAT BINO WORKING CONDITIONS
      *
      * */
     REAL_ESTATE_PROPERTY_HAS_WORKING_CONDITIONS,
@@ -146,13 +138,27 @@ public enum Futures {
      *
      * */
     REAL_ESTATE_TYPE_OF_HOUSE,
+    /*
+     *
+     *
+     * NIMA MAQSADDA YER UCHASTKASI QURILGAN
+     *
+     * */
+    REAL_ESTATE_GROUND_AIM,
 
     /*
      *
      * TRANSPORTDA QOSHIMCHA QULAYLIKLAR BORLIGI
      *
      * */
-    TRANSPORT_HAS_ADDITIONAL_OPTIONS
+    TRANSPORT_HAS_ADDITIONAL_OPTIONS,
+
+    /*
+     *
+     * GARAJ TURI
+     *
+     * */
+    REAL_ESTATE_TYPE_OF_GARAGE
 
 
 
