@@ -30,7 +30,6 @@ public class RealEstate extends ReadyProduct {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-//    private Boolean typeOfHouse;
 
     private Date yearOfIssue;
 
