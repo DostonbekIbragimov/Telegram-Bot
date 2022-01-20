@@ -30,7 +30,7 @@ public class RealEstate extends ReadyProduct {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Boolean typeOfHouse;
+//    private Boolean typeOfHouse;
 
     private Date yearOfIssue;
 
@@ -53,6 +53,13 @@ public class RealEstate extends ReadyProduct {
     @ManyToOne
     private AddOptions apartmentLayout;
 
+    @ManyToOne
+    private AddOptions houseCondition;
+
+    private String typeOfHouse;
+
+
+
     private String appointment;
 
     private Double carPlaces;
@@ -73,7 +80,10 @@ public class RealEstate extends ReadyProduct {
 
     private Date endTime;
 
-    private String bathroom;// problem
+//    private String bathroom;// problem -> solved (with futures in addOptions)
+//
+//    @ManyToOne
+//    private AddOptions bathroom;
 
     /*
      *
@@ -81,6 +91,22 @@ public class RealEstate extends ReadyProduct {
      * if true mebebl bor, if flase yoq
      *
      */
+    @ManyToOne
+    private AddOptions hasHouse;
+
+    @ManyToOne
+    private AddOptions hasHouseConditionsNearby;
+
+
+    @ManyToOne
+    private  AddOptions hasHousePublicUtilities;
+
+    @ManyToOne
+    private AddOptions hasGroundPublicUtilities;
+
+    @ManyToOne
+    private AddOptions groundWhereLocated;
+
 
     private Boolean furniture = false;
 
