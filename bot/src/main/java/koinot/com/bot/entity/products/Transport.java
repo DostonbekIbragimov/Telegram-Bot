@@ -46,6 +46,10 @@ public class Transport extends ReadyProduct {
 
     private String typeOfFuel;
 
+    private String subCategories;
+
+    private String typeOfMoto;
+
     @ManyToOne private Models models;
 
     private Double ownerCount;
