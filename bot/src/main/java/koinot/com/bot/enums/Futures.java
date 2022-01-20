@@ -119,6 +119,29 @@ public enum Futures {
 
     /*
      *
+     *
+     * TIJORAT BINO TURI
+     *
+     * */
+    REAL_ESTATE_TYPE_OF_PROPERTY,
+    /*
+     *
+     *
+     * TIJORAT BINO TURI
+     *
+     * */
+    REAL_ESTATE_PROPERTY_HAS_WORKING_CONDITIONS,
+
+    /*
+     *
+     *
+     * UCHASTKA QURILGAN TURI
+     *
+     * */
+    REAL_ESTATE_TYPE_OF_HOUSE,
+
+    /*
+     *
      * TRANSPORTDA QOSHIMCHA QULAYLIKLAR BORLIGI
      *
      * */
