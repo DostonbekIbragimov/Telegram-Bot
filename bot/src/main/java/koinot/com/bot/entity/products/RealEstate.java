@@ -88,7 +88,11 @@ public class RealEstate extends ReadyProduct {
 //    private String bathroom;// problem -> solved (with futures in addOptions)
 //
 //    @ManyToOne
-//    private AddOptions bathroom;
+//    private AddOptions bathroom
+
+
+    @ManyToOne
+    private AddOptions bathroomInHouse;
 
     /*
      *

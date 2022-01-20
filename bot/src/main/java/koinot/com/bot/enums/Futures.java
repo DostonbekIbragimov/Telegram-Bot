@@ -105,6 +105,13 @@ public enum Futures {
     /*
      *
      *
+     *  UCHASTKADA SANUZEL TURI
+     *
+     * */
+    REAL_ESTATE_BATHROOM_IN_HOUSE,
+    /*
+     *
+     *
      * UCHASTKADA YAQIN ATROFDA BOR BO'LGAN QULAYLIKLAR
      *
      * */
