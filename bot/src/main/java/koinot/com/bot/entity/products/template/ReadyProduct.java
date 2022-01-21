@@ -1,5 +1,6 @@
 package koinot.com.bot.entity.products.template;
 
+import koinot.com.bot.entity.User;
 import koinot.com.bot.entity.addons.Attachment;
 import koinot.com.bot.entity.addons.Currency;
 import koinot.com.bot.entity.addons.Brands;
@@ -79,12 +80,19 @@ public abstract class ReadyProduct {
     @Enumerated(EnumType.STRING)
     private TypeOfAgreement typeOfAgreement;
 
-    private double price;
+    private Double price;
+    /*
+    * narxi o'zgartirilishidan oldingi narxi
+    * */
+    private Double previousPrice;
 
     /*
      * if condition is false then it's used (xolati ishlatilgan)
      * if true -> new (xolati yangi)
      */
     private Boolean condition = false;
+
+    @ManyToOne
+    private User owner;
 
 }

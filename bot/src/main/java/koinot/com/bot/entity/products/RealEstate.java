@@ -33,7 +33,7 @@ public class RealEstate extends ReadyProduct {
 
     private Date yearOfIssue;
 
-    private Double livinigArea;
+    private Double livingArea;
 
     private Double numberOfRooms;
 
@@ -41,9 +41,9 @@ public class RealEstate extends ReadyProduct {
 
     private Double totalArea;
 
-    private Double floor;
+    private Integer floor;
 
-    private Double totalFloors;
+    private Integer totalFloors;
 
 
     @ManyToOne
@@ -52,8 +52,8 @@ public class RealEstate extends ReadyProduct {
     @ManyToOne
     private AddOptions apartmentLayout;
 
-    @ManyToOne
-    private AddOptions houseCondition;
+    @ManyToMany
+    private List<AddOptions> houseCondition;
 
     @ManyToOne
     private AddOptions typeOfProperty;
@@ -61,15 +61,16 @@ public class RealEstate extends ReadyProduct {
     @ManyToOne
     private AddOptions typeOfHouse;
 
+    @ManyToMany
+    private List<AddOptions> propertyHasWorkingConditions;
+
     @ManyToOne
-    private AddOptions propertyHasWorkingConditions;
+    private AddOptions appointment;
 
+    private Integer carPlaces;
 
-    private String appointment;
-
-    private Double carPlaces;
-
-    private String garageType;
+    @ManyToOne
+    private AddOptions typeOfGarage;
 
     private Double square;
 
@@ -85,14 +86,32 @@ public class RealEstate extends ReadyProduct {
 
     private Date endTime;
 
-//    private String bathroom;// problem -> solved (with futures in addOptions)
-//
-//    @ManyToOne
-//    private AddOptions bathroom
+    @ManyToOne
+    private AddOptions bathroom;
 
 
     @ManyToOne
     private AddOptions bathroomInHouse;
+
+
+    @ManyToMany
+    private List<AddOptions> hasHouse;
+
+    @ManyToMany
+    private List<AddOptions> hasHouseConditionsNearby;
+
+
+    @ManyToMany
+    private  List<AddOptions> hasHousePublicUtilities;
+
+
+
+
+    @ManyToMany
+    private List<AddOptions> hasGroundPublicUtilities;
+
+    @ManyToOne
+    private AddOptions groundWhereLocated;
 
     /*
      *
@@ -100,22 +119,6 @@ public class RealEstate extends ReadyProduct {
      * if true mebebl bor, if flase yoq
      *
      */
-    @ManyToOne
-    private AddOptions hasHouse;
-
-    @ManyToOne
-    private AddOptions hasHouseConditionsNearby;
-
-
-    @ManyToOne
-    private  AddOptions hasHousePublicUtilities;
-
-    @ManyToOne
-    private AddOptions hasGroundPublicUtilities;
-
-    @ManyToOne
-    private AddOptions groundWhereLocated;
-
 
     private Boolean furniture = false;
 
@@ -129,8 +132,8 @@ public class RealEstate extends ReadyProduct {
     @ManyToMany
     private List<AddOptions> hasConditionsNearby;
 
-    @ManyToOne
-    private AddOptions hasRepairs;
+    @ManyToMany
+    private List<AddOptions> hasRepairs;
 
     @ManyToOne
     private AddOptions whereLocated;
