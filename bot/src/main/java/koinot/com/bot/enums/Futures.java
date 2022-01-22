@@ -9,13 +9,14 @@ package koinot.com.bot.enums;
  * @author: Qudratjon Komilov
  */
 public enum Futures {
+    /***************************** REAL ESTATE *****************************/
 
     /*
-    *
-    *
-    * IJARA UZOQ MUDDATGA, KIVARTIRA DA BOR BO'LGAN XUSUSIYATLAR
-    *
-    * */
+     *
+     *
+     * IJARA UZOQ MUDDATGA, KIVARTIRA DA BOR BO'LGAN XUSUSIYATLAR
+     *
+     * */
     REAL_ESTATE_HAS_FLAT,
     /*
      *
@@ -26,64 +27,64 @@ public enum Futures {
     REAL_ESTATE_HAS_CONDITIONS_NEARBY,
 
     /*
-    *
-    * UYNI REMONT AXVOLI
-    *
-    * */
+     *
+     * UYNI REMONT AXVOLI
+     *
+     * */
 
     REAL_ESTATE_HAS_HOME_REPAIRS,
     /*
-    *
-    * KVARTIRA QURILISH TURI
-    *
-    * */
+     *
+     * KVARTIRA QURILISH TURI
+     *
+     * */
 
     REAL_ESTATE_TYPE_OF_BUILDING,
     /*
-    *
-    * UYNI REJASI
-    *
-    * */
+     *
+     * UYNI REJASI
+     *
+     * */
 
     REAL_ESTATE_APARTMENT_LAYOUT,
     /*
-    *
-    * UCHASTKANI XOLATI
-    *
-    * */
+     *
+     * UCHASTKANI XOLATI
+     *
+     * */
 
     REAL_ESTATE_HOUSE_CONDITIONS,
 
     /*
-    *
-    * ER KOMMUNAL QULAYLIKLARI
-    *
-    * */
+     *
+     * ER KOMMUNAL QULAYLIKLARI
+     *
+     * */
 
     REAL_ESTATE_GROUND_HAS_PUBLIC_UTILITIES,
 
     /*
-    *
-    * ER JOYLASHGAN JOYI
-    *
-    *  */
+     *
+     * ER JOYLASHGAN JOYI
+     *
+     *  */
 
     REAL_ESTATE_GROUND_WHERE_LOCATED,
 
     /*
-    *
-    * TIJORAT BINO QULAYLIKLAR
-    *
-    * */
+     *
+     * TIJORAT BINO QULAYLIKLAR
+     *
+     * */
 
     REAL_ESTATE_COMMERCIAL_TYPE_CONDITIONS,
 
     /*
-    *
-    * TIJORAT BINO
-    * KOMMUNAL QULAYLIKLAR
-    *
-    * */
+     *
+     * TIJORAT BINO
+     * KOMMUNAL QULAYLIKLAR
+     *
+     * */
 
     REAL_ESTATE_COMMERCIAL_TYPE_HAS_PUBLIC_UTILITIES,
 
@@ -145,6 +146,15 @@ public enum Futures {
      *
      * */
     REAL_ESTATE_GROUND_AIM,
+    /*
+     *
+     * GARAJ TURI
+     *
+     * */
+    REAL_ESTATE_TYPE_OF_GARAGE,
+
+    /***************************** TRANSPORT *****************************/
+
 
     /*
      *
@@ -153,14 +163,15 @@ public enum Futures {
      * */
     TRANSPORT_HAS_ADDITIONAL_OPTIONS,
 
+    /***************************** HOME INVENTORY *****************************/
+
     /*
      *
-     * GARAJ TURI
+     * Mebel Turi
      *
      * */
-    REAL_ESTATE_TYPE_OF_GARAGE
+    HOME_INVENTORY_TYPE_OF_FURNITURE,
 
 
-
-    }
+}
 

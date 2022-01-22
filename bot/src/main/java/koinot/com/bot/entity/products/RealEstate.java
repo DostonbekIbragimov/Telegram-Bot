@@ -104,9 +104,6 @@ public class RealEstate extends ReadyProduct {
     @ManyToMany
     private  List<AddOptions> hasHousePublicUtilities;
 
-
-
-
     @ManyToMany
     private List<AddOptions> hasGroundPublicUtilities;
 

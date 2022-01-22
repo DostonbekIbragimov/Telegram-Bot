@@ -43,7 +43,7 @@ public class Job extends ReadyProduct {
 
     private String phoneNumber;
 
-    @Enumerated(EnumType.STRING) private TypeOfAgreement typeOfAgreement;
+//    @Enumerated(EnumType.STRING) private TypeOfAgreement typeOfAgreement;
 
     private double starPrice;
 
@@ -57,7 +57,6 @@ public class Job extends ReadyProduct {
     private Attachment resume;
 
 
-// attachement for cv should be added
 
 
 
