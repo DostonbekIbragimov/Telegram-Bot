@@ -24,7 +24,4 @@ import javax.persistence.*;
 public class HobbyAndRest extends ReadyProduct {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
-
-
-    @ManyToOne private Brands brands;
 }
