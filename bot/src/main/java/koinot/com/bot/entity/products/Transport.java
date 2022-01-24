@@ -2,7 +2,6 @@ package koinot.com.bot.entity.products;
 
 import koinot.com.bot.entity.addons.AddOptions;
 import koinot.com.bot.entity.addons.Models;
-import koinot.com.bot.entity.addons.TypeOfBody;
 import koinot.com.bot.entity.products.template.ReadyProduct;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,6 +9,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @className: BotMessage  $
@@ -22,39 +22,131 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name="transport")
+@Entity(name = "transport")
 public class Transport extends ReadyProduct {
 
-    @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    @ManyToOne private TypeOfBody typeOfBody;
+    // Kategoriya
+
+    @ManyToOne
+    private AddOptions transportCategory;
+
+    //  Brand / Marka
+    @ManyToOne
+    private Models models;
+
+
+    //  Kuzov
+
+    @ManyToOne
+    private AddOptions transportTypeOfBody;
+
+
+    // Ishlab chiqarilgan yili
 
     private Date yearOfIssue;
 
-    private Double mileage;
-    /*
-     * if typeOfTransmission is false, then Type of transmission is Manual Transmission
-     * (Механика), if true is Automatic
-     */
-    private Boolean typeOfTransmission=false;
 
+    // Probeg
+
+    private Double mileage;
+
+
+    // transmissiya quttisi
+    @ManyToOne
+    private AddOptions typeOfTransmission;
+
+    //  Moshina rangi
     private String colour;
 
+    //  search/post by color code
     private String colourCode;
 
+    //  dvigatel hajmi
     private Double engineCapacity;
 
+
+    //  yoqilg'i turi
     private String typeOfFuel;
 
-    private String subCategories;
 
-    private String typeOfMoto;
+    // haydovchi birligi - > privod
+    private String driveUnit;
 
-    @ManyToOne private Models models;
+    // tashqaridagi bor qulayliklar
+    @ManyToMany
+    private List<AddOptions> hasTransportOptionsOutside;
 
-    private Double ownerCount;
+    // moshinada bor qulayliklar
+    @ManyToMany
+    private List<AddOptions> hasTransportOptions;
 
-    @ManyToOne private AddOptions addOptions;
+    // moshina salon
+    @ManyToMany
+    private List<AddOptions> hasTransportInteriorOptions;
+
+    // moshina media qulayliklari
+    @ManyToMany
+    private List<AddOptions> hasTransportMediaOptions;
+
+
+    // moshina media qulayliklari
+    @ManyToMany
+    private List<AddOptions> hasTransportOpticsOptions;
+
+    // qoshimcha
+    @ManyToMany
+    private List<AddOptions> additionally;
+
+   /*
+   *
+   * sotib olish opsiyasi bilan ijaraga
+   * if false - sotib olish opsiyasi yoq
+   * if true -  sotib olish opsiyasi bor
+   *
+   * */
+
+    private Boolean hasLeasing = false;
+
+    /******** Mototexnika (Moto technics) ********/
+
+    // Transport texnika turi
+
+    @ManyToOne
+    private AddOptions typeOfMotoTechnics;
+
+    // model (brand emas)
+    private String serialModel;
+
+    /******** Suv Transporti (Water Transport) ********/
+
+    // suv texnika turi
+
+    @ManyToOne
+    private AddOptions typeOfWaterTechnics;
+
+    /******** Tijorat Transport Turi (Commercial Type of Transport) ********/
+
+    // Tijorat Transport Categoriyasi (gruzovik, avtobus ...)
+
+    @ManyToOne
+    private AddOptions commercialTransportCategory;
+
+    // avtobus turi
+
+    private String typeOfBus;
+
+    // Avtobus joylar soni
+
+    private Double numberOfBusSeats;
+
+    
+
+
+
 
 
 

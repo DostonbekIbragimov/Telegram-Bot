@@ -2,6 +2,7 @@ package koinot.com.bot.entity.products;
 
 import koinot.com.bot.entity.addons.Attachment;
 import koinot.com.bot.entity.products.template.ReadyProduct;
+import koinot.com.bot.enums.TypeOfAgreement;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -40,23 +41,24 @@ public class Job extends ReadyProduct {
      * */
     private Boolean typeOfBusy=false;
 
-    /*
-     *
-     * buni uzgartirish kerak
-     *
-     * */
+    private String phoneNumber;
 
-//    @Enumerated(EnumType.STRING) private TypeOfAgreement typeOfAgreement;
+    @Enumerated(EnumType.STRING) private TypeOfAgreement typeOfAgreement;
 
     private double starPrice;
 
-    private double enPrice;
+    private double EnPrice;
 
     private Date startWorkTime;
 
     private Date endWorkTime;
 
-    @OneToOne private Attachment resume;
+    @OneToOne
+    private Attachment resume;
+
+
+// attachement for cv should be added
+
 
 
 }
