@@ -1,4 +1,3 @@
-
 package koinot.com.bot.entity.products;
 
 import koinot.com.bot.entity.addons.AddOptions;

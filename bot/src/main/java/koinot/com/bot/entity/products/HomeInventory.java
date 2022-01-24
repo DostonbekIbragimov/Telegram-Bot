@@ -1,6 +1,5 @@
 package koinot.com.bot.entity.products;
 
-import koinot.com.bot.entity.addons.AddOptions;
 import koinot.com.bot.entity.products.template.ReadyProduct;
 import koinot.com.bot.enums.TypeOfAgreement;
 import lombok.AllArgsConstructor;
@@ -25,7 +24,7 @@ public class HomeInventory extends ReadyProduct {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
 
-    @ManyToOne
-    private AddOptions typeOfFurniture;
+    private String subcategories;
+
 
 }
