@@ -209,6 +209,21 @@ public enum Futures {
      *
      * */
     TRANSPORT_HAS_OPTICS_OPTIONS,
+    /*
+     *
+     * TRANSPORT QOSHIMCHA
+     *
+     * */
+    TRANSPORT_HAS_ADDITIONS,
+
+    /*
+     *
+     * MOTOTEXNIKA TURLARI
+     *
+     * */
+    TRANSPORT_TYPE_OF_MOTO_TECHNICS,
+
+
 
 
 
