@@ -1,7 +1,7 @@
 package koinot.com.bot.repository;
 
 
-import koinot.com.bot.entity.products.Clothing;
+import koinot.com.bot.entity.products.Furniture;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -12,6 +12,6 @@ import org.springframework.stereotype.Repository;
  */
 
 @Repository
-public interface FashionAndStyleRepository extends JpaRepository<Clothing, Long> {
+public interface FurnitureRepository extends JpaRepository<Furniture, Long> {
 
 }
