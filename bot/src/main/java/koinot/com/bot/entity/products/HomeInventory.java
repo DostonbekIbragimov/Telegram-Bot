@@ -26,5 +26,4 @@ public class HomeInventory extends ReadyProduct {
 
     private String subcategories;
 
-
 }
