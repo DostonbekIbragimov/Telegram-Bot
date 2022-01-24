@@ -158,13 +158,6 @@ public enum Futures {
 
     /*
      *
-     * TRANSPORTDA QOSHIMCHA QULAYLIKLAR BORLIGI
-     *
-     * */
-    TRANSPORT_HAS_ADDITIONAL_OPTIONS,
-
-    /*
-     *
      * TRANSPORT KATEGORIYALARI
      *
      * */
@@ -182,6 +175,42 @@ public enum Futures {
      *
      * */
     TRANSPORT_TYPE_OF_TRANSMISSION,
+
+    /*
+     *
+     * TRANSPORTDA TASHQI QOSHIMCHA QULAYLIKLAR BORLIGI
+     *
+     * */
+    TRANSPORT_HAS_OPTIONS_OUTSIDE,
+
+    /*
+     *
+     * TRANSPORTDA QOSHIMCHA QULAYLIKLAR BORLIGI
+     *
+     * */
+    TRANSPORT_HAS_OPTIONS,
+    /*
+     *
+     * TRANSPORT SALON QULAYLIKLAR
+     *
+     * */
+    TRANSPORT_HAS_INTERIOR_OPTIONS,
+
+    /*
+     *
+     * TRANSPORT MEDIA QULAYLIKLARI
+     *
+     * */
+    TRANSPORT_HAS_MEDIA_OPTIONS,
+
+    /*
+     *
+     * TRANSPORT OPTIKA
+     *
+     * */
+    TRANSPORT_HAS_OPTICS_OPTIONS,
+
+
 
     /***************************** HOME INVENTORY *****************************/
 

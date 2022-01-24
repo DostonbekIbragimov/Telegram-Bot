@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @className: BotMessage  $
@@ -21,10 +22,12 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name="transport")
+@Entity(name = "transport")
 public class Transport extends ReadyProduct {
 
-    @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
 
 // Kategoriya
@@ -32,13 +35,14 @@ public class Transport extends ReadyProduct {
     @ManyToOne
     private AddOptions transportCategory;
 
-//  Brand / Marka
-    @ManyToOne private Models models;
+    //  Brand / Marka
+    @ManyToOne
+    private Models models;
 
 //  Kuzov
 
     @ManyToOne
-    private  AddOptions transportTypeOfBody;
+    private AddOptions transportTypeOfBody;
 
 // Ishlab chiqarilgan yili
 
@@ -49,32 +53,47 @@ public class Transport extends ReadyProduct {
     private Double mileage;
 
 
-// transmissiya quttisi
-
+    // transmissiya quttisi
     @ManyToOne
     private AddOptions typeOfTransmission;
 
-//  Moshina rangi
+    //  Moshina rangi
     private String colour;
 
-//  search/post by color code
+    //  search/post by color code
     private String colourCode;
 
-//  dvigatel hajmi
+    //  dvigatel hajmi
     private Double engineCapacity;
 
-//  yoqilg'i turi
+
+    //  yoqilg'i turi
     private String typeOfFuel;
 
 
+    // haydovchi birligi - > privod
+    private String driveUnit;
 
-//    private String subCategories;
+    // tashqaridagi bor qulayliklar
+    @ManyToMany
+    private List<AddOptions> hasTransportOptionsOutside;
 
-//
-//    private Double ownerCount;
-//
-//    @ManyToOne private AddOptions addOptions;
+    // moshinada bor qulayliklar
+    @ManyToMany
+    private List<AddOptions> hasTransportOptions;
 
+    // moshina salon
+    @ManyToMany
+    private List<AddOptions> hasTransportInteriorOptions;
+
+    // moshina media qulayliklari
+    @ManyToMany
+    private List<AddOptions> hasTransportMediaOptions;
+
+
+    // moshina media qulayliklari
+    @ManyToMany
+    private List<AddOptions> hasTransportOpticsOptions;
 
 
 }
