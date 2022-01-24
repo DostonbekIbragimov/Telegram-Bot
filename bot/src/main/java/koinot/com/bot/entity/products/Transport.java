@@ -136,6 +136,33 @@ public class Transport extends ReadyProduct {
 
     private Double numberOfBusSeats;
 
+    /******** Zapchastlari (Spares) ********/
+
+    // zapchast nomi
+
+    private String nameOfSpares;
+
+    /*
+    *
+    * Zapchast mavjudligi/buyurtma bo'yicha
+    * if false = buyurtma bo'yicha
+    * if true = mavjud
+    *
+    * */
+    private Boolean availability = false;
+
+    /******** Transport Ijara (Transport Rent) ********/
+
+    // categoriya tanlash
+    @ManyToOne
+    private AddOptions chooseCategoryForRent;
+
+    /******** Transport Remont va Xizmatlar  (Repairs and Services) ********/
+
+    @ManyToMany
+    private List<AddOptions> repairsAndServices;
+
+
 
 
 

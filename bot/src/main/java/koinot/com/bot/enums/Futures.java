@@ -210,6 +210,38 @@ public enum Futures {
      * */
     TRANSPORT_HAS_ADDITIONALLY,
 
+    /*
+     *
+     * TRANSPORT IJARAGA OLISH UCHUN KATEGORIYA TANLASH
+     *
+     * */
+    TRANSPORT_CHOOSE_CATEGORY_FOR_RENT,
+    /*
+     *
+     * TRANSPORT IJARAGA OLISH UCHUN KATEGORIYA TANLASH
+     *
+     * */
+    TRANSPORT_REPAIRS_AND_SERVICES,
+
+    /** MEBEL (FURNITURE) **/
+
+
+    /** KIYIMLAR (CLOTHING) **/
+    /*
+     *
+     * Kiyimlar razmeri
+     *
+     * */
+    CLOTHING_SIZE_OF_CLOTHES,
+
+
+
+
+
+
+
+
+
 
 
 
