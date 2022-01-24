@@ -131,6 +131,12 @@ public class Transport extends ReadyProduct {
 
     /******** Tijorat Transport Turi (Commercial Type of Transport) ********/
 
+    // Tijorat Transport Categoriyasi
+
+    @ManyToOne
+    private AddOptions commercialTransportCategory;
+
+
 
 
 
