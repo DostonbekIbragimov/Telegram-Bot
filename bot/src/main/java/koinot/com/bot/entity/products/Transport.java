@@ -121,7 +121,6 @@ public class Transport extends ReadyProduct {
     // model (brand emas)
     private String serialModel;
 
-
     /******** Suv Transporti (Water Transport) ********/
 
     // suv texnika turi
@@ -131,10 +130,20 @@ public class Transport extends ReadyProduct {
 
     /******** Tijorat Transport Turi (Commercial Type of Transport) ********/
 
-    // Tijorat Transport Categoriyasi
+    // Tijorat Transport Categoriyasi (gruzovik, avtobus ...)
 
     @ManyToOne
     private AddOptions commercialTransportCategory;
+
+    // avtobus turi
+
+    private String typeOfBus;
+
+    // Avtobus joylar soni
+
+    private Double numberOfBusSeats;
+
+    
 
 
 
