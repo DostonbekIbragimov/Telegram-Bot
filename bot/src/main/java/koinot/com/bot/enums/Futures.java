@@ -163,6 +163,26 @@ public enum Futures {
      * */
     TRANSPORT_HAS_ADDITIONAL_OPTIONS,
 
+    /*
+     *
+     * TRANSPORT KATEGORIYALARI
+     *
+     * */
+    TRANSPORT_CATEGORIES,
+    /*
+     *
+     * TRANSPORT KUZOV TURI
+     *
+     * */
+    TRANSPORT_TYPE_OF_BODY,
+
+    /*
+     *
+     * TRANSPORT TRANSMISSIYA QUTTUSI TURI
+     *
+     * */
+    TRANSPORT_TYPE_OF_TRANSMISSION,
+
     /***************************** HOME INVENTORY *****************************/
 
     /*

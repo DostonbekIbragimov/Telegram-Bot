@@ -2,7 +2,6 @@ package koinot.com.bot.entity.products;
 
 import koinot.com.bot.entity.addons.AddOptions;
 import koinot.com.bot.entity.addons.Models;
-import koinot.com.bot.entity.addons.TypeOfBody;
 import koinot.com.bot.entity.products.template.ReadyProduct;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -27,34 +26,54 @@ public class Transport extends ReadyProduct {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
 
-    @ManyToOne private TypeOfBody typeOfBody;
+
+// Kategoriya
+
+    @ManyToOne
+    private AddOptions transportCategory;
+
+//  Brand / Marka
+    @ManyToOne private Models models;
+
+//  Kuzov
+
+    @ManyToOne
+    private  AddOptions transportTypeOfBody;
+
+// Ishlab chiqarilgan yili
 
     private Date yearOfIssue;
 
-    private Double mileage;
-    /*
-     * if typeOfTransmission is false, then Type of transmission is Manual Transmission
-     * (Механика), if true is Automatic
-     */
-    private Boolean typeOfTransmission=false;
+// Probeg
 
+    private Double mileage;
+
+
+// transmissiya quttisi
+
+    @ManyToOne
+    private AddOptions typeOfTransmission;
+
+//  Moshina rangi
     private String colour;
 
+//  search/post by color code
     private String colourCode;
 
+//  dvigatel hajmi
     private Double engineCapacity;
 
+//  yoqilg'i turi
     private String typeOfFuel;
 
-    private String subCategories;
 
-    private String typeOfMoto;
 
-    @ManyToOne private Models models;
+//    private String subCategories;
 
-    private Double ownerCount;
-
-    @ManyToOne private AddOptions addOptions;
+//
+//    private Double ownerCount;
+//
+//    @ManyToOne private AddOptions addOptions;
 
 
 
