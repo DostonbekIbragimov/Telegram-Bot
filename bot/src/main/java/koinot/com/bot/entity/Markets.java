@@ -1,4 +1,4 @@
-package koinot.com.bot.entity.addons;
+package koinot.com.bot.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,19 +12,17 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 
 /**
- * @className: Brands  $
+ * @className: BotMessage  $
  * @description: TODO
- * @date: 15 January 2022 $
- * @time: 12:42 PM $
+ * @date: 09 January 2022 $
+ * @time: 6:35 AM $
  * @author: Qudratjon Komilov
  */
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name="Models")
-public class Models {
-
+@Entity(name="messages")
+public class Markets {
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;
 
     @OrderBy @CreationTimestamp @Column(nullable=false, updatable=false) private Timestamp createdAt;
@@ -35,14 +33,10 @@ public class Models {
 
     @LastModifiedBy private Long updatedBy;
 
-    @Column(columnDefinition="TEXT", nullable=false) private String descriptionUz;//default use
+    @Column(nullable=false, unique=true) private String name;
 
-    @Column(columnDefinition="TEXT", nullable=false) private String descriptionRu;
+    @Column(nullable=false) private String description;
 
-    @Column(columnDefinition="TEXT", nullable=false) private String descriptionEn;
 
-    @Column(nullable=false) private String name;
 
-    @ManyToOne
-    private Brands brands;
 }
