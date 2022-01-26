@@ -9,7 +9,7 @@ package koinot.com.bot.enums;
  * @author: Qudratjon Komilov
  */
 public enum Futures {
-
+         /** REAL ESTATE **/
     /*
     *
     *
@@ -145,20 +145,103 @@ public enum Futures {
      *
      * */
     REAL_ESTATE_GROUND_AIM,
-
-    /*
-     *
-     * TRANSPORTDA QOSHIMCHA QULAYLIKLAR BORLIGI
-     *
-     * */
-    TRANSPORT_HAS_ADDITIONAL_OPTIONS,
-
     /*
      *
      * GARAJ TURI
      *
      * */
-    REAL_ESTATE_TYPE_OF_GARAGE
+    REAL_ESTATE_TYPE_OF_GARAGE,
+
+    /** TRANSPORT **/
+
+    /*
+     *
+     * TRANSPORT KUZOV
+     *
+     * */
+    TRANSPORT_TYPE_OF_BODY,
+
+    /*
+     *
+     * TRANSPORT TRANSMISSIYASI, uzatish qutisi
+     *
+     * */
+    TRANSPORT_TYPE_OF_TRANSMISSION,
+
+    /*
+     *
+     * TRANSPORT TASHQI QULAYLIKLAR
+     *
+     * */
+    TRANSPORT_HAS_OPTIONS_OUTSIDE,
+
+    /*
+     *
+     * TRANSPORT QULAYLIKLAR
+     *
+     * */
+    TRANSPORT_HAS_CONDITIONS,
+
+    /*
+     *
+     * TRANSPORT salon opsiyalari
+     *
+     * */
+    TRANSPORT_HAS_INTERIOR_OPTIONS,
+
+    /*
+     *
+     * TRANSPORT media opsiyalari
+     *
+     * */
+    TRANSPORT_HAS_MEDIA_OPTIONS,
+
+    /*
+     *
+     * TRANSPORT optika opsiyalari
+     *
+     * */
+    TRANSPORT_HAS_OPTICS_OPTIONS,
+
+    /*
+     *
+     * TRANSPORT qo'shimcha ravishda
+     *
+     * */
+    TRANSPORT_HAS_ADDITIONALLY,
+
+    /*
+     *
+     * TRANSPORT IJARAGA OLISH UCHUN KATEGORIYA TANLASH
+     *
+     * */
+    TRANSPORT_CHOOSE_CATEGORY_FOR_RENT,
+    /*
+     *
+     * TRANSPORT IJARAGA OLISH UCHUN KATEGORIYA TANLASH
+     *
+     * */
+    TRANSPORT_REPAIRS_AND_SERVICES,
+
+    /** MEBEL (FURNITURE) **/
+
+
+    /** KIYIMLAR (CLOTHING) **/
+    /*
+     *
+     * Kiyimlar razmeri
+     *
+     * */
+    CLOTHING_SIZE_OF_CLOTHES,
+
+
+
+
+
+
+
+
+
 
 
 

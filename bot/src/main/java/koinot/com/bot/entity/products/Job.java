@@ -57,8 +57,5 @@ public class Job extends ReadyProduct {
     private Attachment resume;
 
 
-// attachement for cv should be added
-
-
 
 }

@@ -1,7 +1,7 @@
 package koinot.com.bot.repository;
 
 
-import koinot.com.bot.entity.addons.TypeOfBody;
+import koinot.com.bot.entity.products.SportInventory;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -12,6 +12,6 @@ import org.springframework.stereotype.Repository;
  */
 
 @Repository
-public interface TypeOfBodyRepository extends JpaRepository<TypeOfBody, Long> {
+public interface SportInventoryRepository extends JpaRepository<SportInventory, Long> {
 
 }

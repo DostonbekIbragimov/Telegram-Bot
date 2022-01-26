@@ -29,12 +29,8 @@ public class Transport extends ReadyProduct {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Kategoriya
+    // Model
 
-    @ManyToOne
-    private AddOptions transportCategory;
-
-    //  Brand / Marka
     @ManyToOne
     private Models models;
 
@@ -93,7 +89,7 @@ public class Transport extends ReadyProduct {
     private List<AddOptions> hasTransportMediaOptions;
 
 
-    // moshina media qulayliklari
+    // moshina optikasi
     @ManyToMany
     private List<AddOptions> hasTransportOpticsOptions;
 
@@ -118,9 +114,6 @@ public class Transport extends ReadyProduct {
     @ManyToOne
     private AddOptions typeOfMotoTechnics;
 
-    // model (brand emas)
-    private String serialModel;
-
     /******** Suv Transporti (Water Transport) ********/
 
     // suv texnika turi
@@ -143,7 +136,34 @@ public class Transport extends ReadyProduct {
 
     private Double numberOfBusSeats;
 
-    
+    /******** Zapchastlari (Spares) ********/
+
+    // zapchast nomi
+
+    private String nameOfSpares;
+
+    /*
+    *
+    * Zapchast mavjudligi/buyurtma bo'yicha
+    * if false = buyurtma bo'yicha
+    * if true = mavjud
+    *
+    * */
+    private Boolean availability = false;
+
+    /******** Transport Ijara (Transport Rent) ********/
+
+    // categoriya tanlash
+    @ManyToOne
+    private AddOptions chooseCategoryForRent;
+
+    /******** Transport Remont va Xizmatlar  (Repairs and Services) ********/
+
+    @ManyToMany
+    private List<AddOptions> repairsAndServices;
+
+
+
 
 
 
