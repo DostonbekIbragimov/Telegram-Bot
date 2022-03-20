@@ -18,7 +18,7 @@ import java.util.List;
  * @description: TODO
  * @date: 07 January 2022 $
  * @time: 12:06 AM $
- * @author: Qudratjon Komilov
+ * @author: Dostonbek Ibragimov
  */
 
 @Configuration

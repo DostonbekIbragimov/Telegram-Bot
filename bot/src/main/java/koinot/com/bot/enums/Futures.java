@@ -6,7 +6,7 @@ package koinot.com.bot.enums;
  * @projectName koinot_shop
  * @date: 18 January 2022 $
  * @time: 14:52 $
- * @author: Qudratjon Komilov
+ * @author: Dostonbek Ibragimov
  */
 public enum Futures {
          /** REAL ESTATE **/

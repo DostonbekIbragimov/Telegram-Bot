@@ -5,7 +5,7 @@ package koinot.com.bot.enums;
  * @description: TODO
  * @date: 09 January 2022 $
  * @time: 6:39 AM $
- * @author: Qudratjon Komilov
+ * @author: Dostonbek Ibragimov
  */
 public enum Msg {
 

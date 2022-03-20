@@ -19,7 +19,7 @@ import static java.lang.String.format;
  * @description: TODO
  * @date: 07 January 2022 $
  * @time: 12:02 AM $
- * @author: Qudratjon Komilov
+ * @author: Dostonbek Ibragimov
  */
 @Slf4j
 public class TelegramBotInitializer implements InitializingBean {

@@ -15,14 +15,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://gitlab.com/qudratjon03031999/koinot_shop.git
+git remote add origin https://gitlab.com/DostonbekIbragimov/koinot_shop.git
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab.com/-/experiment/new_project_readme_content:91342b733c7249bd526941bc70e1375d?https://gitlab.com/qudratjon03031999/koinot_shop/-/settings/integrations)
+- [ ] [Set up project integrations](https://gitlab.com/-/experiment/new_project_readme_content:91342b733c7249bd526941bc70e1375d?https://gitlab.com/DostonbekIbragimov/koinot_shop/-/settings/integrations)
 
 ## Collaborate with your team
 

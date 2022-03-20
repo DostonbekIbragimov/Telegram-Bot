@@ -19,7 +19,7 @@ import java.lang.annotation.Target;
  * @description: TODO
  * @date: 06 January 2022 $
  * @time: 11:58 PM $
- * @author: Qudratjon Komilov
+ * @author: Dostonbek Ibragimov
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)

@@ -7,7 +7,7 @@ package koinot.com.bot.test;
  * @description: TODO
  * @date: 09 January 2022 $
  * @time: 6:54 AM $
- * @author: Qudratjon Komilov
+ * @author: Dostonbek Ibragimov
  */
 public class Test {
     public static void main(String[] args) throws Exception {

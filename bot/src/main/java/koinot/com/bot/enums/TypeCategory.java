@@ -5,7 +5,7 @@ package koinot.com.bot.enums;
  * @description: TODO
  * @date: 15 January 2022 $
  * @time: 1:02 PM $
- * @author: Qudratjon Komilov
+ * @author: Dostonbek Ibragimov
  */
 public enum TypeCategory {
     ELECTRONIC,// ELEKTONIKA MAXULOTLARI

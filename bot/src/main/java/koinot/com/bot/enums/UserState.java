@@ -9,6 +9,7 @@ public enum UserState {
     SEND_ADDRESS,
     EDIT_SEND_ADDRESS,
     SEND_NAME,
+    SEND_SURNAME,
     EDIT_SEND_NAME,
     OPEN_TIME_STADIUM,
     EDIT_OPEN_TIME_STADIUM,
@@ -26,6 +27,10 @@ public enum UserState {
     VERIFY_STADIUM,
     EDIT,
     DEFAULT,
+    SELECT_MENU,
+    CREATE_TEST,
+    CHECK_TEST,
+    SOLVING_TEST,
 
     ///////
 

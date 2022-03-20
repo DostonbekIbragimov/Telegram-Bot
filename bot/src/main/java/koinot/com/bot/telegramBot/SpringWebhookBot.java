@@ -17,7 +17,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
  * @description: TODO
  * @date: 07 January 2022 $
  * @time: 12:00 AM $
- * @author: Qudratjon Komilov
+ * @author: Dostonbek Ibragimov
  */
 public abstract class SpringWebhookBot extends TelegramWebhookBot {
 

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  * @projectName koinot_shop
  * @date: 26 January 2022 $
  * @time: 21:01 $
- * @author: Qudratjon Komilov
+ * @author: Dostonbek Ibragimov
  */
 
 @Component
